@@ -1,0 +1,22 @@
+{
+    "name": "esp32_libqrencode",
+    "version": "1.0.0",
+    "description": "ESP32 compilation helper for libqrencode",
+    "export": {
+        "include":
+        [
+            "libqrencode/*.[ch]",
+            "libqrencode/README.md"
+        ]
+    },
+    "build": {
+        "srcDir": "libqrencode",
+        "flags": [
+            "-DSTATIC_IN_RELEASE=static",
+            "-DMAJOR_VERSION=4",
+            "-DMINOR_VERSION=1",
+            "-DMICRO_VERSION=1",
+            "'-DVERSION=\"4.1.1\"'"
+        ]
+    }
+}
